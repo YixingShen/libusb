@@ -1,0 +1,30 @@
+ubuntu PC
+the first time to configure
+1. Consider adding AC_CONFIG_MACRO_DIR([m4]) to configure.ac
+and re-run libtoolize --force.
+$ vim configure.ac
+2.
+$ libtoolize --force
+$ aclocal
+$ autoheader
+$ automake --force-missing --add-missing
+$ autoconf
+
+3. configure the build system 
+./configure CC=c99 LIBS=-lposix
+
+4.
+make
+
+5. optional
+make check
+
+6.install
+make install
+
+7. remove
+make clean
+make distclean
+make maintainer-clean
+
+8. read INSTALL for compile detail
